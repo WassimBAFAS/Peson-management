@@ -63,6 +63,16 @@ public class EmployeeController {
 			throws ResourceNotFoundException {
 		return employeeService.getById(id);
 	}
+	
+	/**
+	 * Récupère un enregistrement d'employé basé sur l'identifiant fourni.
+	 *
+	 * @param id L'identifiant unique de l'employé à récupérer
+	 * @return EmployeeDTO contenant les détails de l'employé
+	 * @throws ResourceNotFoundException si aucun employé n'existe avec l'identifiant spécifié
+	 * @note Cette opération renvoie un seul enregistrement d'employé correspondant à l'identifiant fourni.
+	 *       La réponse inclut tous les champs de l'employé encapsulés dans l'objet EmployeeDTO.
+	 */
 
 	@Operation(description = "Add an Employees")
 	@PostMapping
