@@ -34,10 +34,19 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
+	/**
+	 * Fetches all employees from the system
+	 * 
+	 * @return List<EmployeeDTO> containing all employee records
+	 * @apiNote This endpoint returns all employees with pagination
+	 * @param pageNo   The number of page
+	 * @param pageSize The number of records to return per page
+	 * @param sortBy   The field to sort the results by
+	 */
+
 	@Operation(description = "fetch all Employees")
 	@ApiResponses(value = { @ApiResponse(responseCode = "200", description = "successful operation") })
-	//@GetMapping("/allEmployees")
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public List<EmployeeDTO> getAllEmployees(
 //			@RequestParam(defaultValue = "0") Integer pageNo,
 //            @RequestParam(defaultValue = "10") Integer pageSize,
