@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@ToString
-@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class EmployeeDTO {
